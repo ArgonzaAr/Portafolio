@@ -1,0 +1,141 @@
+:root{
+    /*Paleta de colores*/
+    --primario: #404258;
+    --secundario: #474E68;
+    --tercero: #50577A;
+    --cuarto: #6B728E;
+    --blanco: #ffffff;
+    --grisClaro: #dfe9f3;
+}
+html{
+    font-size: 62%;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);/*Fondo degradado para la página*/
+    font-size: 16px; /* 1 rem = 10px */
+    font-family: 'Poppins', sans-serif;
+    min-width: 200px;
+    height: 100%;
+}
+
+.shadow{
+    -webkit-box-shadow: 0px 2px 18px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 18px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 18px -4px rgba(0,0,0,0.75);
+    padding:0rem 0rem 0rem 0rem;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.boton{
+    background-color: #404258;
+    color: var(--blanco);
+    margin: 2rem 1rem;
+    padding: .5rem 3rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.barraNavegacion{
+    position: absolute;
+    background-color: var(--primario);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 20rem;
+    display: flex;
+    flex-direction: column; /*Alineación en columna*/
+    align-items: left;
+}
+
+.barraNavegacion .imageNav{
+    text-align: center;
+    margin: 0rem 1rem;
+}
+.barraNavegacion .button{
+    margin: 3rem 0rem 0rem 0rem;
+}
+.barraNavegacion .button:hover{
+    /*background-color: var(--cuarto);*/
+    background-color: var(--cuarto);
+    padding: 1rem;
+    
+}
+
+.barraNavegacion div a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+footer{
+    color: var(--cuarto);
+    font-size: 1rem;
+    
+}
+
+
+.mainContent{
+    margin: 1rem 5% 100% 22rem ;
+    height: 100%;
+}
+
+@media (max-width: 480px) {
+   
+    .barraNavegacion{
+        top: 0;
+        bottom: 0;
+        left: 2;
+        height: 10rem;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .boton{
+        width: 100%;
+        margin: 1rem 0rem;
+    }
+
+    .barraNavegacion div a{
+        font-size: 1.5rem;
+    }
+
+    .barraNavegacion .button{
+        margin: 1rem 1rem 0rem 0rem;
+    }
+
+    .barraNavegacion .imageNav{
+        text-align: center;
+        margin: 0rem 1rem 0rem 0rem;
+    }
+
+    .barraNavegacion .button .icon{
+        width: 15px;
+        height: 15px;
+    }
+    .barraNavegacion .imageNav .icon-tabler-circle{
+        width: 40px;
+        height: 40px;
+    }
+
+    .mainContent{
+        margin: 10rem 3rem 2rem 1rem;
+        height: 100%;
+    }
+}
